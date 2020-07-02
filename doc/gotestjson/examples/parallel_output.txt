@@ -1,0 +1,18 @@
+=== RUN   TestInteractive
+=== PAUSE TestInteractive
+=== CONT  TestInteractive
+=== RUN   TestInteractive/One
+=== RUN   TestInteractive/Two
+=== RUN   TestInteractive/Nested_3
+=== RUN   TestInteractive/Nested_3/Nested_3_One
+=== RUN   TestInteractive/Nested_3/Nested_3_Two
+    TestInteractive/Nested_3/Nested_3_Two: parallel_test.go:13: Foo
+--- FAIL: TestInteractive (0.00s)
+    --- PASS: TestInteractive/One (0.00s)
+    --- PASS: TestInteractive/Two (0.00s)
+    --- FAIL: TestInteractive/Nested_3 (0.00s)
+        --- PASS: TestInteractive/Nested_3/Nested_3_One (0.00s)
+        --- FAIL: TestInteractive/Nested_3/Nested_3_Two (0.00s)
+FAIL
+FAIL	command-line-arguments	0.002s
+FAIL

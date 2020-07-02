@@ -1,0 +1,32 @@
+{"Time":"2020-07-01T11:53:56.889558444-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive"}
+{"Time":"2020-07-01T11:53:56.889734492-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive","Output":"=== RUN   TestInteractive\n"}
+{"Time":"2020-07-01T11:53:56.88974966-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive","Output":"=== PAUSE TestInteractive\n"}
+{"Time":"2020-07-01T11:53:56.889757022-07:00","Action":"pause","Package":"command-line-arguments","Test":"TestInteractive"}
+{"Time":"2020-07-01T11:53:56.889763851-07:00","Action":"cont","Package":"command-line-arguments","Test":"TestInteractive"}
+{"Time":"2020-07-01T11:53:56.889769852-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive","Output":"=== CONT  TestInteractive\n"}
+{"Time":"2020-07-01T11:53:56.889780211-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive/One"}
+{"Time":"2020-07-01T11:53:56.88978683-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/One","Output":"=== RUN   TestInteractive/One\n"}
+{"Time":"2020-07-01T11:53:56.889794637-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive/Two"}
+{"Time":"2020-07-01T11:53:56.889803589-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Two","Output":"=== RUN   TestInteractive/Two\n"}
+{"Time":"2020-07-01T11:53:56.889810308-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive/Nested_3"}
+{"Time":"2020-07-01T11:53:56.889815663-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3","Output":"=== RUN   TestInteractive/Nested_3\n"}
+{"Time":"2020-07-01T11:53:56.889821552-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_One"}
+{"Time":"2020-07-01T11:53:56.88982681-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_One","Output":"=== RUN   TestInteractive/Nested_3/Nested_3_One\n"}
+{"Time":"2020-07-01T11:53:56.88984247-07:00","Action":"run","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_Two"}
+{"Time":"2020-07-01T11:53:56.889848143-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_Two","Output":"=== RUN   TestInteractive/Nested_3/Nested_3_Two\n"}
+{"Time":"2020-07-01T11:53:56.889853864-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_Two","Output":"    TestInteractive/Nested_3/Nested_3_Two: parallel_test.go:13: Foo\n"}
+{"Time":"2020-07-01T11:53:56.88986331-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive","Output":"--- FAIL: TestInteractive (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889869646-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/One","Output":"    --- PASS: TestInteractive/One (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889876782-07:00","Action":"pass","Package":"command-line-arguments","Test":"TestInteractive/One","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889889941-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Two","Output":"    --- PASS: TestInteractive/Two (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889896669-07:00","Action":"pass","Package":"command-line-arguments","Test":"TestInteractive/Two","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889902271-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3","Output":"    --- FAIL: TestInteractive/Nested_3 (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889908637-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_One","Output":"        --- PASS: TestInteractive/Nested_3/Nested_3_One (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889915157-07:00","Action":"pass","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_One","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889920771-07:00","Action":"output","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_Two","Output":"        --- FAIL: TestInteractive/Nested_3/Nested_3_Two (0.00s)\n"}
+{"Time":"2020-07-01T11:53:56.889933108-07:00","Action":"fail","Package":"command-line-arguments","Test":"TestInteractive/Nested_3/Nested_3_Two","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889938977-07:00","Action":"fail","Package":"command-line-arguments","Test":"TestInteractive/Nested_3","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889944383-07:00","Action":"fail","Package":"command-line-arguments","Test":"TestInteractive","Elapsed":0}
+{"Time":"2020-07-01T11:53:56.889949705-07:00","Action":"output","Package":"command-line-arguments","Output":"FAIL\n"}
+{"Time":"2020-07-01T11:53:56.890021364-07:00","Action":"output","Package":"command-line-arguments","Output":"FAIL\tcommand-line-arguments\t0.016s\n"}
+{"Time":"2020-07-01T11:53:56.89005251-07:00","Action":"fail","Package":"command-line-arguments","Elapsed":0.016}
