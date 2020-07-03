@@ -21,6 +21,9 @@ func NewDecoder(rd io.Reader) *Decoder {
 func (decoder *Decoder) Decode() (*TestEvent, error) {
 	testEvent := &TestEvent{}
 	err := decoder.jsonDecoder.Decode(testEvent)
+	if err != nil {
+		err = ErrContentFormatInvalid
+	}
 	return testEvent, err
 }
 

@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"io"
 	"strings"
+
+	"github.com/Fire-Dragon-DoL/lab/encoding/gotest"
 )
 
 // type Event string
@@ -42,7 +44,7 @@ func Transform(input io.Reader, output io.Writer) error {
 		return nil
 	}
 
-	return ErrNotParsable
+	return gotest.ErrContentFormatInvalid
 }
 
 // type jsonTransformer struct {

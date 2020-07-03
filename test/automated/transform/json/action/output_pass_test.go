@@ -9,10 +9,10 @@ import (
 	"github.com/Fire-Dragon-DoL/lab/controls/input/actions"
 )
 
-func TestTransformJSONActionPass(t *testing.T) {
+func TestTransformJSONActionOutputPass(t *testing.T) {
 	t.Run("Transform JSON", func(t *testing.T) {
-		t.Run("Action is pass", func(t *testing.T) {
-			input := actions.PassExample()
+		t.Run("Action is 'output'", func(t *testing.T) {
+			input := actions.OutputPassExample()
 			output := controls.OutputStringExample()
 			err := lab.Transform(input, output)
 
