@@ -1,6 +1,7 @@
 package lab_test
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/Fire-Dragon-DoL/lab"
@@ -17,6 +18,7 @@ func TestTransformJSONActionOutputPass(t *testing.T) {
 			err := lab.Transform(input, output)
 
 			t.Run("No error", func(t *testing.T) {
+				fmt.Printf("%+v\n", input)
 				Assert(t, err == nil)
 			})
 

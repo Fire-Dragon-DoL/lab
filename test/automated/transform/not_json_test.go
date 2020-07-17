@@ -6,6 +6,7 @@ import (
 	"github.com/Fire-Dragon-DoL/lab"
 	. "github.com/Fire-Dragon-DoL/lab/asserting"
 	"github.com/Fire-Dragon-DoL/lab/controls"
+	"github.com/Fire-Dragon-DoL/lab/encoding/gotest"
 )
 
 func TestTransformNotJSON(t *testing.T) {
@@ -15,7 +16,7 @@ func TestTransformNotJSON(t *testing.T) {
 		err := lab.Transform(input, output)
 
 		t.Run("Error not parsable", func(t *testing.T) {
-			Assert(t, err == lab.ErrNotParsable)
+			Assert(t, err == gotest.ErrContentFormatInvalid)
 		})
 	})
 }

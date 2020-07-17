@@ -40,6 +40,10 @@ func Transform(input io.Reader, output io.Writer) error {
 		return nil
 	}
 
+	if strings.Contains(line, "output") {
+		return nil
+	}
+
 	if strings.Contains(line, "pass") {
 		return nil
 	}
