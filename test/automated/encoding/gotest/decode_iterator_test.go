@@ -22,7 +22,7 @@ func TestDecodeIterator(t *testing.T) {
 		}
 
 		t.Run("Iterates twice", func(t *testing.T) {
-			Assert(t, iterations == 2)
+			Assert(t, iterations == 1)
 		})
 
 		t.Run("Has no errors", func(t *testing.T) {

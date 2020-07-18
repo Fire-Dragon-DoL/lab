@@ -37,7 +37,7 @@ func (iterator *DecodeIterator) Next() bool {
 		iterator.err = err
 	}
 
-	return true
+	return iterator.needsIteration()
 }
 
 // Get returns the current decoded data for the current iteration
@@ -47,4 +47,8 @@ func (iterator *DecodeIterator) Get() (interface{}, error) {
 
 func (iterator *DecodeIterator) ended() bool {
 	return iterator.isFinished || iterator.err != nil
+}
+
+func (iterator *DecodeIterator) needsIteration() bool {
+	return !iterator.ended()
 }
