@@ -12,9 +12,13 @@ type Assertion func(testing.TB, bool, ...interface{})
 
 // PanicMsg asserts that the provided function triggers panic with the provided message
 func (assert Assertion) PanicMsg(t testing.TB, do func(), assertMsg func(interface{}) bool) {
+	t.Helper()
+
 	panicked := true
 
 	defer func() {
+		t.Helper()
+
 		err := recover()
 
 		assert(t, panicked, "Panic expected")
@@ -31,12 +35,16 @@ func (assert Assertion) PanicMsg(t testing.TB, do func(), assertMsg func(interfa
 
 // Panic asserts that the provided function triggers panic
 func (assert Assertion) Panic(t testing.TB, do func()) {
+	t.Helper()
+
 	assert.PanicMsg(t, do, any)
 }
 
 func any(_ interface{}) bool { return true }
 
 func assertf(t testing.TB, result bool, msgArgs ...interface{}) {
+	t.Helper()
+
 	msg := "Assertion failed"
 	var args []interface{}
 
@@ -50,7 +58,6 @@ func assertf(t testing.TB, result bool, msgArgs ...interface{}) {
 	}
 
 	if !result {
-		t.Helper()
 		t.Errorf(msg, args...)
 	}
 }
