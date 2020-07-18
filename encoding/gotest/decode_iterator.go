@@ -1,6 +1,8 @@
 package gotest
 
-import "io"
+import (
+	"io"
+)
 
 // DecodeIterator decodes each input line
 type DecodeIterator struct {
@@ -35,7 +37,7 @@ func (iterator *DecodeIterator) Next() bool {
 		iterator.err = err
 	}
 
-	return iterator.ended()
+	return true
 }
 
 // Get returns the current decoded data for the current iteration

@@ -1,6 +1,8 @@
 package asserting
 
-import "testing"
+import (
+	"testing"
+)
 
 // Assert tests if the result is true
 var Assert Assertion = Assertion(assertf)
@@ -48,6 +50,7 @@ func assertf(t testing.TB, result bool, msgArgs ...interface{}) {
 	}
 
 	if !result {
+		t.Helper()
 		t.Errorf(msg, args...)
 	}
 }
