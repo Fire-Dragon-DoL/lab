@@ -1,17 +1,19 @@
 package asserting
 
-import (
-	"testing"
-)
+// TestController provides functionality to interrupt and log during a test execution. It's usually `testing.T`
+type TestController interface {
+	Helper()
+	Errorf(format string, args ...interface{})
+}
 
 // Assert tests if the result is true
 var Assert Assertion = Assertion(assertf)
 
-// Assertion provides a function to assert results, as well as a function to assert "comma ok" tuples and assert and recover from functions triggering panic
-type Assertion func(testing.TB, bool, ...interface{})
+// Assertion provides a function to assert results and recover from functions triggering panic
+type Assertion func(TestController, bool, ...interface{})
 
 // PanicMsg asserts that the provided function triggers panic with the provided message
-func (assert Assertion) PanicMsg(t testing.TB, do func(), assertMsg func(interface{}) bool) {
+func (assert Assertion) PanicMsg(t TestController, do func(), assertMsg func(interface{}) bool) {
 	t.Helper()
 
 	panicked := true
@@ -34,7 +36,7 @@ func (assert Assertion) PanicMsg(t testing.TB, do func(), assertMsg func(interfa
 }
 
 // Panic asserts that the provided function triggers panic
-func (assert Assertion) Panic(t testing.TB, do func()) {
+func (assert Assertion) Panic(t TestController, do func()) {
 	t.Helper()
 
 	assert.PanicMsg(t, do, any)
@@ -42,7 +44,7 @@ func (assert Assertion) Panic(t testing.TB, do func()) {
 
 func any(_ interface{}) bool { return true }
 
-func assertf(t testing.TB, result bool, msgArgs ...interface{}) {
+func assertf(t TestController, result bool, msgArgs ...interface{}) {
 	t.Helper()
 
 	msg := "Assertion failed"
