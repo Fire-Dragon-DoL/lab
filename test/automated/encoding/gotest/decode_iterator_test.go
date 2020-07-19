@@ -13,11 +13,10 @@ func TestDecodeIterator(t *testing.T) {
 		input := actions.OutputPassExample()
 		iterator := gotest.NewDecodeIterator(input)
 		iterations := 0
-		var decodeErr error
 		var decodedData interface{}
 
 		for iterator.Next() {
-			decodedData, decodeErr = iterator.Get()
+			decodedData = iterator.Get()
 			iterations += 1
 		}
 
@@ -26,7 +25,7 @@ func TestDecodeIterator(t *testing.T) {
 		})
 
 		t.Run("Has no errors", func(t *testing.T) {
-			Assert(t, decodeErr == nil)
+			Assert(t, iterator.Error() == nil)
 		})
 
 		_, ok := decodedData.(*gotest.TestEvent)

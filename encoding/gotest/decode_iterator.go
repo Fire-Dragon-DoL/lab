@@ -40,9 +40,14 @@ func (iterator *DecodeIterator) Next() bool {
 	return iterator.needsIteration()
 }
 
+// Error returns the last recorded `error`
+func (iterator *DecodeIterator) Error() error {
+	return iterator.err
+}
+
 // Get returns the current decoded data for the current iteration
-func (iterator *DecodeIterator) Get() (interface{}, error) {
-	return iterator.testEvent, iterator.err
+func (iterator *DecodeIterator) Get() interface{} {
+	return iterator.testEvent
 }
 
 func (iterator *DecodeIterator) ended() bool {
