@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/Fire-Dragon-DoL/lab"
-	. "github.com/Fire-Dragon-DoL/lab/asserting"
 	"github.com/Fire-Dragon-DoL/lab/controls"
 	"github.com/Fire-Dragon-DoL/lab/encoding/gotest"
+	. "github.com/thehungry-dev/asserting"
 )
 
 func TestTransformNotJSON(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/Fire-Dragon-DoL/lab"
-	. "github.com/Fire-Dragon-DoL/lab/asserting"
 	"github.com/Fire-Dragon-DoL/lab/controls"
 	"github.com/Fire-Dragon-DoL/lab/controls/input/actions"
+	. "github.com/thehungry-dev/asserting"
 )
 
 func TestTransformJSONActionRun(t *testing.T) {

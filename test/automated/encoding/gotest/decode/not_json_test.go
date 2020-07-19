@@ -3,9 +3,9 @@ package gotest_test
 import (
 	"testing"
 
-	. "github.com/Fire-Dragon-DoL/lab/asserting"
 	"github.com/Fire-Dragon-DoL/lab/controls"
 	"github.com/Fire-Dragon-DoL/lab/encoding/gotest"
+	. "github.com/thehungry-dev/asserting"
 )
 
 func TestDecodeNotJSON(t *testing.T) {
